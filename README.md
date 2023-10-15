@@ -22,7 +22,7 @@ The DQL algorithm involves the following key components:
 
    The Q-value is updated using the Bellman equation:
    
-   $\[Q(s, a; \theta)$ = $\mathbb{E}_{s'}$ $[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]$
+   $\[Q(s, a; \theta)$ = $\mathbb{E}_{s'}[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]$
    
    where:
    - \$(s'\)$ is the next state.
