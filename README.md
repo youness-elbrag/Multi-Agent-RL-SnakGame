@@ -22,13 +22,13 @@ The DQL algorithm involves the following key components:
 
    The Q-value is updated using the Bellman equation:
    
-   $[Q(s, a; \theta) = \mathbb{E}_{s'}[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]$
+   $\[Q(s, a; \theta)$ = $\mathbb{E}_{s'}[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]$
    
    where:
-   - \(s'\) is the next state.
-   - \(r\) is the reward obtained.
-   - \(\gamma\) is the discount factor.
-   - \(\theta^-\) represents the target Q-network.
+   - \$(s'\)$ is the next state.
+   - $\(r\)$ is the reward obtained.
+   - $\(\gamma\)$ is the discount factor.
+   - $\(\theta^-\)$ represents the target Q-network.
 
 2. **Experience Replay**: To improve stability and break correlations in the data, DQL uses experience replay. Experiences $\((s, a, r, s')\)$ are stored in a replay buffer, and mini-batches are randomly sampled for training.
 
