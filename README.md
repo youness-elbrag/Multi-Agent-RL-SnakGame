@@ -22,7 +22,7 @@ The DQL algorithm involves the following key components:
 
    The Q-value is updated using the Bellman equation:
    
-   \[Q(s, a; \theta) = \mathbb{E}_{s'}[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]
+   $\[Q(s, a; \theta) = \mathbb{E}_{s'}[r + \gamma \max_{a'} Q(s', a'; \theta^-)|s, a]\]$
    
    where:
    - \(s'\) is the next state.
@@ -40,9 +40,9 @@ The DQL algorithm involves the following key components:
 
    - **Boltzmann Exploration (Softmax Policy)**: Instead of a fixed \(\epsilon\), the Boltzmann exploration strategy uses a temperature parameter \(\tau\). Actions are sampled probabilistically according to the Boltzmann distribution, where the probability of selecting action \(a\) is defined as:
    
-     \[P(a|s) = \frac{e^{Q(s, a; \theta) / \tau}}{\sum_{a'} e^{Q(s, a'; \theta) / \tau}}\]
+     $\[P(a|s) = \frac{e^{Q(s, a; \theta) / \tau}}{\sum_{a'} e^{Q(s, a'; \theta) / \tau}}\]$
    
-     where \(\tau\) controls the exploration intensity. Higher \(\tau\) values lead to more exploratory behavior, while lower values make the agent more deterministic.
+     where $\(\tau\)$ controls the exploration intensity. Higher \(\tau\) values lead to more exploratory behavior, while lower values make the agent more deterministic.
 
 5. **Q-Learning Update Rule**: The Q-values are updated using the Bellman equation, and the network parameters \(\theta\) are adjusted to minimize the temporal difference (TD) error.
 
