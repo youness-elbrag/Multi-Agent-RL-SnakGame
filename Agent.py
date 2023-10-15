@@ -3,7 +3,7 @@ import random
 import numpy as np
 from collections import deque
 from env import SnakeGameAI, Direction, Point
-from Model.agent import ConvolutionalQNet, QTrainer
+from Model.agent import Linear_QNet, QTrainer
 from helper import plot
 
 MAX_MEMORY = 100_000
